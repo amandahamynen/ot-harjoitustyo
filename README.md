@@ -10,3 +10,4 @@ Tässä tekstiä *kursivoituna*
 ... tässä puolestaan **lihavoituna**
 ... ja tässä ***molempina!***
 
+✧･ﾟ: *✧･ﾟ:* Lisää tekstiä! *:･ﾟ✧*:･ﾟ✧
