@@ -1,4 +1,7 @@
-# Tehtävät
+# Ohjelmistotekniikka, kevät 2021
+
+## Tehtävät
+
 ### Viikko 1:
 
 [gitlog.txt](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
@@ -11,3 +14,4 @@ Tässä tekstiä *kursivoituna*
 ... ja tässä ***molempina!***
 
 ✧･ﾟ: *✧･ﾟ:* Lisää tekstiä! *:･ﾟ✧*:･ﾟ✧
+
