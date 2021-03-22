@@ -1,0 +1,114 @@
+commit de449ed6bd6631d30d2d7b6a23fe2513321739dd
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 20:31:11 2021 +0200
+
+    poistettiin ja muutettiin tiedoston nimeä
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e1c1ac06bf909b055b965f4b3a3cb9d203a8b9ba
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 20:24:49 2021 +0200
+
+    uusi hakemisto ja sinne tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e4ae06d807eb8a12d51d34da3727702a3d6567b5
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 20:20:31 2021 +0200
+
+    lisäyksiä ja poistoja
+
+ eka.txt    | 4 +++-
+ kolmas.txt | 2 +-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+commit aa519e1a5b7cd582adf0c9eac369ecba25b1e81d
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 20:17:41 2021 +0200
+
+    muutettiin tiedoston nimeä
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 45e3dae36fd9dee884ad20564525781ec51da23a
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 20:15:48 2021 +0200
+
+    poistettiin toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit bfafb558344ed101179220d46ecfb6b6d3b41111
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 20:11:12 2021 +0200
+
+    poistettiin ja lisättiin tekstiä
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e6b77f151f033f24c89e0a8b313217e2f5e9211a
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 20:08:28 2021 +0200
+
+    lisättiin paljon tekstiä
+
+ tiedosto.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 30b1775374e85bafe19b7042bcfb7e9b063e4582
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 19:52:19 2021 +0200
+
+    lisätty hakemisto jokin
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ec8167ddbc8fccb0f9fdadf44cfcf52e8867e8cd
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 19:51:00 2021 +0200
+
+    muutettiin tiedostoja toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit d8ec578c2e09eeeec76a07bc0d2f01302001cd4d
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 19:48:49 2021 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e036a7e94345fec684987685e09966d820357a9b
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 19:45:45 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit cee48abcc8a9e8a721955cb4576c7827ca7f0289
+Author: Amanda <amanda.hamynen@gmail.com>
+Date:   Thu Mar 18 19:43:38 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
