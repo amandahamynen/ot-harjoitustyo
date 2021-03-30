@@ -11,6 +11,11 @@
 ### Viikko 2:
 [katettavuusraportti](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/laskarit/viikko2/N%C3%A4ytt%C3%B6kuva%202021-3-29%20kello%2016.30.19.png)
 
+## Dokumentaatio
+
+[vaatimusmäärittely](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+[tuntikirjanpito](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+
 
 Tässä tekstiä *kursivoituna*
 ... tässä puolestaan **lihavoituna**
