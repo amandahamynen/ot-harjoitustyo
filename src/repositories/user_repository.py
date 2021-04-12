@@ -28,7 +28,7 @@ class UserRepository:
         return list(map(get_users_by_row, rows))
 
     def delete_all(self):
-        cursor = self._connection.cursor()
+        cursor = self.connection.cursor()
         cursor.execute('DELETE FROM Users')
         self.connection.commit()
 

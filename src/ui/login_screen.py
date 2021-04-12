@@ -15,8 +15,8 @@ class LoginScreen():
         self.initialize()
 
     def initialize(self):
-        self.frame = tkinter.Frame(master=self.root, width=1200, height=700)# width=1280, height=720)
-        self.login_frame = tkinter.Frame(self.root, background="WHITE")#, width=50, height=50)
+        self.frame = tkinter.Frame(master=self.root, width=1200, height=700)
+        self.login_frame = tkinter.Frame(self.root, background="WHITE")
         
         label = tkinter.Label(master=self.login_frame, text="Login to Quizzy", fg="black", bg="white", font=("Arial", 25))
         label.grid(padx=50, pady=20, sticky=constants.N)

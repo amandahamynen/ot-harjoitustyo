@@ -2,3 +2,14 @@ laskarit/viikko2/unicafe/src/__pycache__/
 laskarit/viikko2/unicafe/src/tests/__pycache__/
 laskarit/viikko2/unicafe/.coverage
 laskarit/viikko2/unicafe/htmlcov
+
+.vscode
+.coverage
+.pytest_cache
+htmlcov
+__pycache__
+*.pyc
+*.pyo
+src/__pycache__/
+
+data/database.sqlite
