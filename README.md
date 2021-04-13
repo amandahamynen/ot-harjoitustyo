@@ -1,26 +1,52 @@
 # Ohjelmistotekniikka, kevät 2021
 
-## Tehtävät
+# Quizzy
+----------
 
-### Viikko 1:
+Quizzy-sovelluksella rekisteröityneet käyttäjät voivat kirjautua sisään sovellukseen ja pelata tietovisapeliä.
 
-[gitlog.txt](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
-
-### Viikko 2:
-[katettavuusraportti](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/laskarit/viikko2/N%C3%A4ytt%C3%B6kuva%202021-3-29%20kello%2016.30.19.png)
+## Huomio Python-versiosta
+Sovelluksen toiminta on testattu Python-versiolla 3.6.0. Vanhempien Python-versioiden kanssa saattaa ilmentyä ongelmia.
 
 ## Dokumentaatio
 
-[vaatimusmäärittely](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+- [vaatimusmäärittely](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-[tuntikirjanpito](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+- [tuntikirjanpito](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 
-Tässä tekstiä *kursivoituna*
-... tässä puolestaan **lihavoituna**
-... ja tässä ***molempina!***
+## Asennus
 
-✧･ﾟ: *✧･ﾟ:* Lisää tekstiä! *:･ﾟ✧*:･ﾟ✧
+1. Asenna riippuvuudet komennolla:
 
+> poetry install
+
+2. Suorita vaadittavat alustustoimenpiteet komennolla:
+
+> poetry run invoke build
+ 
+3. Käynnistä sovellus komennolla:
+
+>poetry run invoke start
+
+## Komentorivitoiminnot
+
+### Ohjelman suorittaminen
+
+Ohjelman pystyy suorittamaan komennolla:
+
+> poetry run invoke start
+
+### Testaus
+
+Testit suoritetaan komennolla:
+
+> poetry run invoke test
+
+### Testikattavuus
+
+Testikattavuusraportin voi generoida komennolla:
+
+> poetry run invoke coverage-report
+
+Raportti generoituu htmlcov-hakemistoon.
