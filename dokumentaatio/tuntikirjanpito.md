@@ -7,3 +7,4 @@
 |8.4.   |2         | Tkinterin käytön opettelua |
 |10.4.  |3         | Kotinäytön alustamista |
 |12.4.  |2         | Testien luomista ja muuta pientä hienosäätöä |
+|yht.   |17       |
