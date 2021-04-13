@@ -1,7 +1,6 @@
 # Ohjelmistotekniikka, kevät 2021
 
 # Quizzy
-----------
 
 Quizzy-sovelluksella rekisteröityneet käyttäjät voivat kirjautua sisään sovellukseen ja pelata tietovisapeliä.
 
