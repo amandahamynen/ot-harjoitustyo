@@ -9,9 +9,11 @@ Sovelluksen toiminta on testattu Python-versiolla 3.6.0. Vanhempien Python-versi
 
 ## Dokumentaatio
 
-- [vaatimusmäärittely](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+- [Vaatimusmäärittely](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-- [tuntikirjanpito](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+- [Tuntikirjanpito](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+
+- [Arkkitehtuurikuvaus] (https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
 
 ## Asennus
