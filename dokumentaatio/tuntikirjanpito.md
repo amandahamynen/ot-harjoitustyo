@@ -8,4 +8,9 @@
 |10.4.  |3         | Kotinäytön alustamista |
 |11.4.  |2         | Invoken käytön harjoittelua ja lisäämistä sovellukseen |
 |12.4.  |2         | Testien luomista ja muuta pientä hienosäätöä |
-|yht.   |21       |
+|15.4.  |5         | Tietovisan ohjelmointia |
+|16.4.  |3         | Tietovisan ohjelmoinnin jatkoa |
+|18.4.  |3         | Bugien korjailua |
+|19.4.  |2         | Pientä hienosäätöä koodiin ja referenssisovellukseen lisätutustumista |
+|20.4.  |1         | Testien lisäämistä |
+|yht.   |35       |
