@@ -51,3 +51,9 @@ Testikattavuusraportin voi generoida komennolla:
 > poetry run invoke coverage-report
 
 Raportti generoituu htmlcov-hakemistoon.
+
+### Pylint
+
+Pylintin tarkastelun saa suorittamalla komennon:
+
+> poetry run invoke lint
