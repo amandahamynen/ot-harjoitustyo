@@ -1,14 +1,18 @@
 import tkinter
 from entities.user import User
+from entities.question import Question
 
 from repositories.user_repository import (user_repository as default_user_repository)
+from repositories.question_repository import (question_repository as default_question_repository)
+
 
 class InvalidCredentialsError(Exception):
     pass
 
 class QuizzyService:
-    def __init__(self, user_repository = default_user_repository):
+    def __init__(self, user_repository = default_user_repository, question_repository = default_question_repository):
         self.user_repository = default_user_repository
+        self.question_repository = default_question_repository
         self.user = None
 
     def create_user(self, username, password, logged_in = True):
@@ -39,6 +43,35 @@ class QuizzyService:
 
     def get_users(self):
         return self.user_repository.find_all()
+
+    def get_questions(self):
+        questions = self.question_repository.find_all()
+        return questions
+
+    def check_if_correct(self, question, chosen):
+        if question.answer == chosen:
+            return True
+        else:
+            return False
+
+    def update_user_highscore(self, points):
+        if points > self.user.highscore:
+            self.user_repository.update_highscore(self.user.username, points)
+
+    def next_question(self, q_num):
+        q_num += 1
+        return q_num
+
+    def check_for_more_questions(self, q_num, questions):
+        if q_num < len(questions):
+            return True
+        else:
+            return False
+
+    def restart_quiz(self, points, q_num):
+        points = 0
+        q_num = -1
+        return points, q_num
 
         
 quizzy_service = QuizzyService()

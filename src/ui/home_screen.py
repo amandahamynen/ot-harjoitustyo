@@ -3,9 +3,10 @@ import tkinter
 from services.quizzy_service import quizzy_service
 
 class HomeScreen:
-    def __init__(self, root, handle_logout):
+    def __init__(self, root, handle_logout, handle_start):
         self.root = root
         self.handle_logoout = handle_logout
+        self.handle_start = handle_start
         self.frame = None
         self.selection_frame = None
         self.initialize()
@@ -23,6 +24,9 @@ class HomeScreen:
 
         label = tkinter.Label(master=self.selection_frame, text=f"Welcome to Quizzy, {user.username}!", fg="black", bg="white", font=("Arial", 25))
         label.place(x=450,y=30, anchor=constants.N)
+
+        start_button = tkinter.Button(self.selection_frame, text="Start the quiz", command=self.handle_start, fg="white", bg="white")
+        start_button.place(x=450, y=400, anchor=constants.N)
 
         self.selection_frame.place(x=600, y=100, anchor=constants.N)
 
