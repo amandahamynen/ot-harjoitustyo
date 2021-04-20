@@ -4,10 +4,11 @@ from ui.user_creation_screen import UserCreation
 from ui.home_screen import HomeScreen
 from ui.quizzy_screen import QuizzyScreen
 
+
 class UI():
     def __init__(self, root):
         self.root = root
-        self.root.resizable(0,0)
+        self.root.resizable(0, 0)
         self.current = None
 
     def start(self):
@@ -15,17 +16,20 @@ class UI():
 
     def show_login_screen(self):
         self.hide_current()
-        self.current = LoginScreen(self.root, self.show_home_screen, self.show_user_creation_screen)
+        self.current = LoginScreen(
+            self.root, self.show_home_screen, self.show_user_creation_screen)
         self.current.pack()
 
     def show_user_creation_screen(self):
         self.hide_current()
-        self.current = UserCreation(self.root, self.show_home_screen, self.show_login_screen)
+        self.current = UserCreation(
+            self.root, self.show_home_screen, self.show_login_screen)
         self.current.pack()
 
     def show_home_screen(self):
         self.hide_current()
-        self.current = HomeScreen(self.root, self.show_login_screen, self.show_quiz_screen)
+        self.current = HomeScreen(
+            self.root, self.show_login_screen, self.show_quiz_screen)
         self.current.pack()
 
     def show_quiz_screen(self):

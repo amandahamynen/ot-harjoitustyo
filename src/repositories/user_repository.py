@@ -1,17 +1,20 @@
 from entities.user import User
 from database_connection import get_database_connection
 
+
 def get_users_by_row(row):
     return User(row["username"], row["password"], row["highscore"]) if row else None
 
+
 class UserRepository:
-    
+
     def __init__(self, connection):
         self.connection = connection
 
     def create(self, user):
         cursor = self.connection.cursor()
-        cursor.execute("INSERT INTO Users (username, password, highscore) values (?,?,?)", (user.username, user.password, 0))
+        cursor.execute("INSERT INTO Users (username, password, highscore) values (?,?,?)",
+                       (user.username, user.password, 0))
         self.connection.commit()
         return user
 
@@ -34,7 +37,8 @@ class UserRepository:
 
     def update_highscore(self, username, score):
         cursor = self.connection.cursor()
-        cursor.execute("UPDATE Users SET highscore = ? WHERE username = ?", (score, username))
+        cursor.execute(
+            "UPDATE Users SET highscore = ? WHERE username = ?", (score, username))
         self.connection.commit()
 
 
