@@ -14,3 +14,4 @@ src/__pycache__/
 .DS_Store
 
 data/database.sqlite
+data/test-database.sqlite
