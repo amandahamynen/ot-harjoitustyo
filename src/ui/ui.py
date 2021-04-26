@@ -34,7 +34,7 @@ class UI():
 
     def show_quiz_screen(self):
         self.hide_current()
-        self.current = QuizzyScreen(self.root, self.show_home_screen, 10)
+        self.current = QuizzyScreen(self.root, self.show_home_screen)
         self.current.pack()
 
     def hide_current(self):

@@ -10,6 +10,7 @@ class HomeScreen:
         self.handle_start = handle_start
         self.frame = None
         self.selection_frame = None
+        self.q_num = 5
         self.initialize()
 
     def initialize(self):
@@ -30,11 +31,25 @@ class HomeScreen:
                               text=f"Welcome to Quizzy, {user.username}!", fg="black", bg="white", font=("Arial", 25))
         label.place(x=450, y=30, anchor=constants.N)
 
+        label2 = tkinter.Label(self.selection_frame, text="Please choose the amount of questions: ", fg="black", bg="white")
+        label2.place(x=400, y=350, anchor=constants.N)
+
+        num_options = [3,5,10]
+        self.chosen = tkinter.StringVar()
+        self.chosen.set(num_options[0])
+        num = tkinter.OptionMenu(self.selection_frame, self.chosen, *num_options)
+        num.place(x=580, y=350, anchor=constants.N)
+
         start_button = tkinter.Button(
-            self.selection_frame, text="Start the quiz", command=self.handle_start, fg="white", bg="white")
+            self.selection_frame, text="Start the quiz", command=self.start_handler, fg="white", bg="white")
         start_button.place(x=450, y=400, anchor=constants.N)
 
         self.selection_frame.place(x=600, y=100, anchor=constants.N)
+
+    def start_handler(self):
+        self.q_num = self.chosen.get()
+        quizzy_service.set_number_of_questions(self.q_num)
+        self.handle_start()
 
     def pack(self):
         self.frame.pack(fill=constants.X)

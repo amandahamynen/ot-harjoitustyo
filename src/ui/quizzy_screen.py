@@ -9,10 +9,10 @@ q_num = 0
 
 
 class QuizzyScreen:
-    def __init__(self, root, handle_back, how_many):
+    def __init__(self, root, handle_back):
         self.root = root
         self.handle_back = handle_back
-        self.how_many = how_many
+        self.how_many = 5
         self.questions = []
         self.frame = None
         self.question_frame = None
@@ -23,8 +23,10 @@ class QuizzyScreen:
     def initialize_questions(self):
         global points
         points = 0
+        self.how_many = int(quizzy_service.get_number_of_questions())
         self.questions = quizzy_service.get_questions()
         random.shuffle(self.questions)
+        self.questions = [x for index, x in enumerate(self.questions) if index < self.how_many]
 
     def initialize(self):
         global points
@@ -32,7 +34,7 @@ class QuizzyScreen:
         self.question_frame = tkinter.Frame(self.root, bg="white")
 
         go_back_button = tkinter.Button(
-            self.frame, text="Return to homescreen", command=self.handle_back)
+            self.frame, text="Return to homescreen", command=self.back_handler)
         go_back_button.place(x=1000, y=10)
 
         self.initialize_question_view()
@@ -58,6 +60,13 @@ class QuizzyScreen:
             end.pack()
             points, q_num = quizzy_service.restart_quiz(points, q_num)
         q_num = quizzy_service.next_question(q_num)
+
+    def back_handler(self):
+        global q_num 
+        global points
+        q_num = 0
+        points = 0
+        self.handle_back()
 
     def pack(self):
         self.frame.pack(fill=constants.X)

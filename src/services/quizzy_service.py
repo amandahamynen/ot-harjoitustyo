@@ -17,6 +17,7 @@ class QuizzyService:
         self.user_repository = default_user_repository
         self.question_repository = default_question_repository
         self.user = None
+        self.number_of_questions = 5
 
     def create_user(self, username, password, logged_in=True):
         existing_user = self.user_repository.find_by_username(username)
@@ -46,6 +47,12 @@ class QuizzyService:
 
     def get_users(self):
         return self.user_repository.find_all()
+
+    def set_number_of_questions(self, n):
+        self.number_of_questions = n
+
+    def get_number_of_questions(self):
+        return self.number_of_questions
 
     def get_questions(self):
         questions = self.question_repository.find_all()
