@@ -16,7 +16,7 @@ Uudet käyttäjät tulee aluksi rekisteröidä sovellukseen, jonka jälkeen sove
   - [x] Tietovisan päätettyä käyttäjä näkee montako pistettä hän sai yhteensä ja voi palata takaisin kotinäytölle
 
 ### Jatkokehitysideoita
-- Aluksi kysymykset ovat ennalta määrättyjä, joista sovellus valitsee 10 satunnaista kysymystä. Sovelluksen kehittyessä käyttäjä voi valita kuinka monta kysymystä haluaa tietovisaan.
+- [x] Aluksi kysymykset ovat ennalta määrättyjä, joista sovellus valitsee 10 satunnaista kysymystä. Sovelluksen kehittyessä käyttäjä voi valita kuinka monta kysymystä haluaa tietovisaan.
 - Kysymyksissä on eri kategorioita, joista käyttäjä voi valita kotinäytöllä minkä kategorian kysymyksiä haluaa tietovisaan
 - Käyttäjä näkee parhaimman tuloksensa kotinäytöltä
 - Käyttäjä voi lisätä omia kysymyksiä sovellukseen
