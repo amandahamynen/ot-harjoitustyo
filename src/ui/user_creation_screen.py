@@ -15,11 +15,15 @@ class UserCreation:
         self.last_name_entry = None
         self.password_entry = None
         self.error_label = None
+        self.bg=tkinter.PhotoImage(file="src/resources/boat-5889919_1280.png")
         self.initialize()
 
     def initialize(self):
         self.frame = tkinter.Frame(master=self.root, width=1200, height=700)
         self.creation_frame = tkinter.Frame(self.root, background="white")
+
+        label_bg = tkinter.Label(master=self.frame, image=self.bg)
+        label_bg.place(x=0, y=0)
 
         label = tkinter.Label(self.creation_frame, text="Create a new user",
                               fg="black", bg="white", font=("Arial", 25))

@@ -13,11 +13,15 @@ class LoginScreen():
         self.username_entry = None
         self.password_entry = None
         self.error_label = None
+        self.bg=tkinter.PhotoImage(file="src/resources/boat-5889919_1280.png")
         self.initialize()
 
     def initialize(self):
         self.frame = tkinter.Frame(master=self.root, width=1200, height=700)
         self.login_frame = tkinter.Frame(self.root, background="WHITE")
+
+        label_bg = tkinter.Label(master=self.frame, image=self.bg)
+        label_bg.place(x=0, y=0)
 
         label = tkinter.Label(master=self.login_frame, text="Login to Quizzy",
                               fg="black", bg="white", font=("Arial", 25))

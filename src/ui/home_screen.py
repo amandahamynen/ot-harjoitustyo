@@ -11,12 +11,17 @@ class HomeScreen:
         self.frame = None
         self.selection_frame = None
         self.q_num = 5
+        self.bg=tkinter.PhotoImage(file="src/resources/boat-5889919_1280.png")
+
         self.initialize()
 
     def initialize(self):
         self.frame = tkinter.Frame(master=self.root, width=1200, height=700)
         self.selection_frame = tkinter.Frame(
             self.root, width=900, height=500, bg="white")
+
+        label_bg = tkinter.Label(master=self.frame, image=self.bg)
+        label_bg.place(x=0, y=0)
 
         logout_button = tkinter.Button(
             master=self.frame, text="Logout", command=self.handle_logoout, fg="white", bg="white")

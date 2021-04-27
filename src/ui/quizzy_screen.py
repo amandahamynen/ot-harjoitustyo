@@ -17,6 +17,7 @@ class QuizzyScreen:
         self.frame = None
         self.question_frame = None
         self.question_view = None
+        self.bg=tkinter.PhotoImage(file="src/resources/boat-5889919_1280.png")
         self.initialize_questions()
         self.initialize()
 
@@ -32,6 +33,9 @@ class QuizzyScreen:
         global points
         self.frame = tkinter.Frame(self.root, width=1200, height=700)
         self.question_frame = tkinter.Frame(self.root, bg="white")
+
+        label_bg = tkinter.Label(master=self.frame, image=self.bg)
+        label_bg.place(x=0, y=0)
 
         go_back_button = tkinter.Button(
             self.frame, text="Return to homescreen", command=self.back_handler)
