@@ -13,4 +13,7 @@
 |18.4.  |3         | Bugien korjailua |
 |19.4.  |2         | Pientä hienosäätöä koodiin ja referenssisovellukseen lisätutustumista |
 |20.4.  |1         | Testien lisäämistä |
-|yht.   |35       |
+|25.4.  |3         | Uuden toiminnallisuuden lisäys, koodin korjaamista ja testausta |
+|26.4.  |2         | Lisää testausta |
+|27.4.  |2         | Kuvan lisääminen sovelluksen taustalle ja muuta pientä korjausta |
+|yht.   |42        |
