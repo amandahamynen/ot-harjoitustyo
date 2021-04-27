@@ -4,6 +4,8 @@
 
 Quizzy-sovelluksella rekisteröityneet käyttäjät voivat kirjautua sisään sovellukseen ja pelata tietovisapeliä.
 
+- [Release 1](https://github.com/amandahamynen/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Huomio Python-versiosta
 Sovelluksen toiminta on testattu Python-versiolla 3.6.0. Vanhempien Python-versioiden kanssa saattaa ilmentyä ongelmia.
 
