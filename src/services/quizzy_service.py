@@ -29,6 +29,7 @@ class QuizzyService:
         self.question_repository = default_question_repository
         self.user = None
         self.number_of_questions = 5
+        self.topic_of_questions = 'Capital cities'
 
     def create_user(self, username, password, logged_in=True):
 
@@ -109,6 +110,25 @@ class QuizzyService:
 
         return self.user_repository.find_all()
 
+    def set_topic_of_questions(self, topic):
+
+        """ Valitsee kysymykset käyttäjän valitseman aihealueen perusteella.
+        Args:
+            topic: Aihealueen nimi, tyypiltään String.
+        """
+
+        self.topic_of_questions = topic
+
+    def get_topic_of_questions(self):
+
+        """ Palauttaa kysymysten aihealueen.
+
+        Returns:
+            Kysymysten aihealueen, tyypiltään String.
+        """
+
+        return self.topic_of_questions
+
     def set_number_of_questions(self, n):
 
         """ Asettaa kysymysten määräksi käyttäjän valitseman määrän. 
@@ -130,13 +150,21 @@ class QuizzyService:
 
     def get_questions(self):
 
-        """ Palauttaa kaikki tiedostossa olevat kysymykset.
+        """ Palauttaa tiedostossa olevat kysymykset käyttäjän valitseman aihealueen perusteella.
 
         Returns:
             Listan kysymyksistä.
         """
 
         questions = self.question_repository.find_all()
+
+        if self.topic_of_questions == 'Capital cities':
+            questions = questions[0:10]
+        elif self.topic_of_questions == 'Films':
+            questions = questions[10:20]
+        else:
+            questions = questions[20:30]
+
         return questions
 
     def check_if_correct(self, question, chosen):

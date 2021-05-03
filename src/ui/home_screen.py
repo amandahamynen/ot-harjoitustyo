@@ -36,6 +36,15 @@ class HomeScreen:
                               text=f"Welcome to Quizzy, {user.username}!", fg="black", bg="white", font=("Arial", 25))
         label.place(x=450, y=30, anchor=constants.N)
 
+        label1 = tkinter.Label(self.selection_frame, text="Please choose the topic of questions: ", fg="black", bg="white")
+        label1.place(x=400, y=250, anchor=constants.N)
+
+        topic_options = ['Capital cities', 'Films', 'Games']
+        self.topic = tkinter.StringVar()
+        self.topic.set(topic_options[0])
+        t = tkinter.OptionMenu(self.selection_frame, self.topic, *topic_options)
+        t.place(x=580, y=250, anchor=constants.N)
+
         label2 = tkinter.Label(self.selection_frame, text="Please choose the amount of questions: ", fg="black", bg="white")
         label2.place(x=400, y=350, anchor=constants.N)
 
@@ -52,6 +61,8 @@ class HomeScreen:
         self.selection_frame.place(x=600, y=100, anchor=constants.N)
 
     def start_handler(self):
+        self.chosen_topic = self.topic.get()
+        quizzy_service.set_topic_of_questions(self.chosen_topic)
         self.q_num = self.chosen.get()
         quizzy_service.set_number_of_questions(self.q_num)
         self.handle_start()
