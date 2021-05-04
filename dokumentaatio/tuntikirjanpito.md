@@ -16,4 +16,7 @@
 |25.4.  |3         | Uuden toiminnallisuuden lisäys, koodin korjaamista ja testausta |
 |26.4.  |2         | Lisää testausta |
 |27.4.  |2         | Kuvan lisääminen sovelluksen taustalle ja muuta pientä korjausta |
-|yht.   |42        |
+|2.5.   |2         | Docstring-dokumentointi
+|3.5.   |5         | Lisää Docstring-dokumentointia, kysymysten lisäämistä ja aihealueen valinta -toiminto |
+|4.5.   |4         | Testausta ja dokumentointia
+|yht.   |53        |
