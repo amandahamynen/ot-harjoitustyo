@@ -44,3 +44,9 @@ class TestUserRepository(unittest.TestCase):
         user_repository.delete_all()
         users = user_repository.find_all()
         self.assertEqual(len(users), 0)
+
+    def test_update_highscore(self):
+        user_repository.create(self.user_amanda)
+        user_repository.update_highscore(self.user_amanda.username,3)
+        user = user_repository.find_by_username(self.user_amanda.username)
+        self.assertEqual(3, user.highscore)

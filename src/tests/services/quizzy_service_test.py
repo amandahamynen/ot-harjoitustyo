@@ -59,4 +59,9 @@ class TestQuizzyService(unittest.TestCase):
         user = self.quizzy_service.get_current_user()
         self.assertEqual(user.username, self.user_amanda.username)
 
-    
+    def test_logout(self):
+        self.login_user(self.user_amanda)
+        user = self.quizzy_service.get_current_user()
+        self.quizzy_service.logout()
+        user = self.quizzy_service.get_current_user()
+        self.assertEqual(None, user)
