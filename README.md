@@ -17,20 +17,28 @@ Sovelluksen toiminta on testattu Python-versiolla 3.6.0. Vanhempien Python-versi
 
 - [Arkkitehtuurikuvaus](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+- [Käyttöohje](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
+
 
 ## Asennus
 
 1. Asenna riippuvuudet komennolla:
 
-> poetry install
+```bash
+poetry install
+```
 
 2. Suorita vaadittavat alustustoimenpiteet komennolla:
 
-> poetry run invoke build
+```bash
+poetry run invoke build
+ ```
  
 3. Käynnistä sovellus komennolla:
 
->poetry run invoke start
+```bash
+poetry run invoke start
+```
 
 ## Komentorivitoiminnot
 
@@ -38,19 +46,25 @@ Sovelluksen toiminta on testattu Python-versiolla 3.6.0. Vanhempien Python-versi
 
 Ohjelman pystyy suorittamaan komennolla:
 
-> poetry run invoke start
+```bash
+poetry run invoke start
+```
 
 ### Testaus
 
 Testit suoritetaan komennolla:
 
-> poetry run invoke test
+```bash
+poetry run invoke test
+```
 
 ### Testikattavuus
 
 Testikattavuusraportin voi generoida komennolla:
 
-> poetry run invoke coverage-report
+```bash
+poetry run invoke coverage-report
+```
 
 Raportti generoituu htmlcov-hakemistoon.
 
@@ -58,4 +72,6 @@ Raportti generoituu htmlcov-hakemistoon.
 
 Pylintin tarkastelun saa suorittamalla komennon:
 
-> poetry run invoke lint
+```bash
+poetry run invoke lint
+```
