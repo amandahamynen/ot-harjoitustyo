@@ -40,14 +40,14 @@ class FakeQuestionRepository:
 class TestQuizzyService(unittest.TestCase):
     def setUp(self):
         self.quizzy_service = QuizzyService(FakeUserRepository(), FakeQuestionRepository())
-        self.user_amanda = User("amanda", "a123", 0)
+        self.user_amanda = User("amanda", "a123", 0, "a", "a")
         self.question = Question("q", ["1","2","3","4"],"1")
 
     def login_user(self, user):
-        self.quizzy_service.create_user(user.username, user.password)
+        self.quizzy_service.create_user(user.username, user.password, user.firstname, user.lastname)
 
     def test_login_with_correct_username_and_password(self):
-        self.quizzy_service.create_user("testi_username", "testi_password")
+        self.quizzy_service.create_user("testi_username", "testi_password", "testi_firstname", "testi_lastname")
         user = self.quizzy_service.login("testi_username", "testi_password")
         self.assertEqual(user.username, "testi_username")
 

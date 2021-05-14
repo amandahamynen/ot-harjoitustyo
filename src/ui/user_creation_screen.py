@@ -54,6 +54,8 @@ class UserCreation:
     def creation_handler(self):
         username = self.username_entry.get()
         password = self.password_entry.get()
+        firstname = self.first_name_entry.get()
+        lastname = self.last_name_entry.get()
 
         if len(username) == 0 or len(password) == 0:
             if self.error_label:
@@ -64,7 +66,7 @@ class UserCreation:
             return
 
         try:
-            quizzy_service.create_user(username, password)
+            quizzy_service.create_user(username, password, firstname, lastname)
             self.handle_creation()
         except:
             if self.error_label:

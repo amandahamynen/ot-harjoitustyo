@@ -6,9 +6,9 @@ from entities.user import User
 class TestUserRepository(unittest.TestCase):
     def setUp(self):
         user_repository.delete_all()
-        self.user_amanda = User('Amanda', 'a', 0)
-        self.user_toinen = User('Toinen', 't', 0)
-        self.user_kolmas = User('Kolmas', 'k', 0)
+        self.user_amanda = User('Amanda', 'a', 0, 'a', 'a')
+        self.user_toinen = User('Toinen', 't', 0, 't', 't')
+        self.user_kolmas = User('Kolmas', 'k', 0, 'k', 'k')
 
     def test_creation(self):
         user_repository.create(self.user_amanda)

@@ -33,7 +33,7 @@ class HomeScreen:
         username_label.place(x=10, y=15)
 
         label = tkinter.Label(master=self.selection_frame,
-                              text=f"Welcome to Quizzy, {user.username}!", fg="black", bg="white", font=("Arial", 25))
+                              text=f"Welcome to Quizzy, {user.firstname} {user.lastname}!", fg="black", bg="white", font=("Arial", 25))
         label.place(x=450, y=30, anchor=constants.N)
 
         label1 = tkinter.Label(self.selection_frame, text="Please choose the topic of questions: ", fg="black", bg="white")

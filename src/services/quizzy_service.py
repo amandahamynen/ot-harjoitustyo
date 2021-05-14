@@ -31,7 +31,7 @@ class QuizzyService:
         self.number_of_questions = 5
         self.topic_of_questions = 'Capital cities'
 
-    def create_user(self, username, password, logged_in=True):
+    def create_user(self, username, password, firstname, lastname, logged_in=True):
 
         """ Luo uuden käyttäjän ja kirjaa sen sisään.
 
@@ -44,10 +44,8 @@ class QuizzyService:
             User-olio.
         """
 
-        existing_user = self.user_repository.find_by_username(username)
-        if existing_user:
-            print("Username already exists")
-        user = User(username, password, 0)
+        #existing_user = self.user_repository.find_by_username(username)
+        user = User(username, password, 0, firstname, lastname)
         new_user = self.user_repository.create(user)
         if logged_in:
             self.user = user
