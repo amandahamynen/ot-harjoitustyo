@@ -3,12 +3,15 @@ from config import QUESTIONS_FILE_PATH
 
 
 class QuestionRepository:
-    def __init__(self, file_path):
-        self.file_path = file_path
 
-    def read(self):
+    """ Luokka, joka lukee kysymykset CSV-tiedostosta. """
+
+    def __init__(self, file_path):
+        self._file_path = file_path
+
+    def _read(self):
         questions = []
-        with open(self.file_path) as file:
+        with open(self._file_path) as file:
             for row in file:
                 row = row.replace('\n', '')
                 parts = row.split(',')
@@ -21,7 +24,10 @@ class QuestionRepository:
         return questions
 
     def find_all(self):
-        return self.read()
+
+        """ Lukee CSV-tiedoston ja palauttaa listan Question-olioista. """
+
+        return self._read()
 
 
 question_repository = QuestionRepository(QUESTIONS_FILE_PATH)
