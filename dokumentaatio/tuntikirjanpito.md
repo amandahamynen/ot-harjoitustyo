@@ -19,4 +19,7 @@
 |2.5.   |2         | Docstring-dokumentointi
 |3.5.   |5         | Lisää Docstring-dokumentointia, kysymysten lisäämistä ja aihealueen valinta -toiminto |
 |4.5.   |4         | Testausta ja dokumentointia
-|yht.   |53        |
+|14.5.  |2         | Lisättiin toiminnallisuus, jolla sovellus tervehtii käyttäjää käyttäjän etunimellä ja sukunimellä |
+|15.5.  |2         | Dokumentointia |
+|16.5.  |4         | Koodin hienosäätöä, pylint-pisteiden parantamista ja dokumentointia |
+|yht.   |61        |
