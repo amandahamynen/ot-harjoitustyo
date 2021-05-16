@@ -1,5 +1,36 @@
 # Käyttöohje
 
+Lataa projektin viimeisin versio (Loppupalautus).
+
+## Konfigurointi
+
+Tallennuksessa käytyttyjen tiedostojen nimiä voi halutessaan konfiguroida käynnistyshakemistossa .env-tiedostossa. Tiedostot luodaan automaattisesti data-kansioon, jos niitä ei siellä vielä ole. Tiedoston muoto on seuraava:
+
+```bash
+DATABASE_FILENAME=database.sqlite
+QUESTIONS_FILENAME=questions.csv
+```
+
+## Ohjelman käynnistäminen
+
+Ennen ohjelman käynnistämistä, asenna projektin riippuvuudet komennolla:
+
+```bash
+poetry install
+```
+
+Tämän jälkeen suorita vaadittavat alustustoimenpiteet komennolla:
+
+```bash
+poetry run invoke build
+ ```
+
+Nyt ohjelman voi käynnistää komennolla:
+
+```bash
+poetry run invoke start
+```
+
 ## Kirjautuminen
 
 Quizzy-sovellukseen käynnistäminen avaa kirjautumisnäkymän:
