@@ -1,4 +1,3 @@
-import tkinter
 from entities.user import User
 from entities.question import Question
 
@@ -44,8 +43,7 @@ class QuizzyService:
             User-olio.
         """
 
-        #existing_user = self.user_repository.find_by_username(username)
-        user = User(username, password, 0, firstname, lastname)
+        user = User(username, password, firstname, lastname)
         new_user = self.user_repository.create(user)
         if logged_in:
             self.user = user
@@ -88,15 +86,6 @@ class QuizzyService:
 
         return self.user
 
-    def get_highscore(self):
-
-        """ Palauttaa käyttäjän korkeimman pistemäärän.
-
-        Returns:
-            Käyttäjän korkein pistemäärä, tyypiltään Integer.
-        """
-
-        return self.user.highscore
 
     def get_users(self):
 
@@ -180,16 +169,6 @@ class QuizzyService:
             return True
         else:
             return False
-
-    def update_user_highscore(self, points):
-
-        """ Päivittää tarvittaessa sisään kirjautuneen käyttäjän korkeimman pistemäärän.
-        Args:
-            points = Käyttäjän saama pistemäärä pelistä.
-        """
-
-        if points > self.user.highscore:
-            self.user_repository.update_highscore(self.user.username, points)
 
     def next_question(self, q_num):
 

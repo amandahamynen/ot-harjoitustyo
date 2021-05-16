@@ -6,9 +6,9 @@ from entities.user import User
 class TestUserRepository(unittest.TestCase):
     def setUp(self):
         user_repository.delete_all()
-        self.user_amanda = User('Amanda', 'a', 0, 'a', 'a')
-        self.user_toinen = User('Toinen', 't', 0, 't', 't')
-        self.user_kolmas = User('Kolmas', 'k', 0, 'k', 'k')
+        self.user_amanda = User('Amanda', 'a', 'a', 'a')
+        self.user_toinen = User('Toinen', 't', 't', 't')
+        self.user_kolmas = User('Kolmas', 'k', 'k', 'k')
 
     def test_creation(self):
         user_repository.create(self.user_amanda)
@@ -44,9 +44,3 @@ class TestUserRepository(unittest.TestCase):
         user_repository.delete_all()
         users = user_repository.find_all()
         self.assertEqual(len(users), 0)
-
-    def test_update_highscore(self):
-        user_repository.create(self.user_amanda)
-        user_repository.update_highscore(self.user_amanda.username,3)
-        user = user_repository.find_by_username(self.user_amanda.username)
-        self.assertEqual(3, user.highscore)

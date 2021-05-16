@@ -40,7 +40,7 @@ class FakeQuestionRepository:
 class TestQuizzyService(unittest.TestCase):
     def setUp(self):
         self.quizzy_service = QuizzyService(FakeUserRepository(), FakeQuestionRepository())
-        self.user_amanda = User("amanda", "a123", 0, "a", "a")
+        self.user_amanda = User("amanda", "a123", "a", "a")
         self.question = Question("q", ["1","2","3","4"],"1")
 
     def login_user(self, user):

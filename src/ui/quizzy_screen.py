@@ -1,5 +1,5 @@
 import random
-from tkinter import Label, StringVar, ttk, Tk, constants
+from tkinter import constants
 import tkinter
 from entities.question import Question
 from services.quizzy_service import quizzy_service
@@ -66,7 +66,6 @@ class QuizzyScreen:
             result = tkinter.Label(
                 self._question_frame, text=f"You got {points}/{len(self._questions)} right!", fg="black", bg="white")
             result.pack()
-            quizzy_service.update_user_highscore(points)
             end = tkinter.Label(
                 self._question_frame, text=f"Please return to homescreen", fg="black", bg="white")
             end.pack()

@@ -3,7 +3,7 @@ from database_connection import get_database_connection
 
 
 def get_users_by_row(row):
-    return User(row["username"], row["password"], row["highscore"], row["firstname"], row["lastname"]) if row else None
+    return User(row["username"], row["password"], row["firstname"], row["lastname"]) if row else None
 
 
 class UserRepository:
@@ -24,8 +24,8 @@ class UserRepository:
         """
 
         cursor = self.connection.cursor()
-        cursor.execute("INSERT INTO Users (username, password, highscore, firstname, lastname) values (?,?,?,?,?)",
-                       (user.username, user.password, 0, user.firstname, user.lastname))
+        cursor.execute("INSERT INTO Users (username, password, firstname, lastname) values (?,?,?,?)",
+                       (user.username, user.password, user.firstname, user.lastname))
         self.connection.commit()
         return user
 
@@ -63,12 +63,6 @@ class UserRepository:
 
         cursor = self.connection.cursor()
         cursor.execute('DELETE FROM Users')
-        self.connection.commit()
-
-    def update_highscore(self, username, score):
-        cursor = self.connection.cursor()
-        cursor.execute(
-            "UPDATE Users SET highscore = ? WHERE username = ?", (score, username))
         self.connection.commit()
 
 

@@ -1,4 +1,4 @@
-from tkinter import Image, ttk, Tk, constants
+from tkinter import constants
 import tkinter
 from services.quizzy_service import quizzy_service
 

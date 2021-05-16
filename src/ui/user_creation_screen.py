@@ -1,4 +1,4 @@
-from tkinter import ttk, Tk, constants
+from tkinter import ttk, constants
 import tkinter
 from services.quizzy_service import quizzy_service
 

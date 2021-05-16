@@ -4,10 +4,9 @@ class User:
     Attributes: 
         username: Kuvastaa käyttäjän käyttäjätunnusta, tyypiltään String.
         password: Kuvastaa käyttäjän salasanaa, tyypiltään String.
-        highscore: Kuvastaa käyttäjän korkeintä pistemäärää, tyypiltään Integer.
     """
 
-    def __init__(self, username, password, highscore, firstname, lastname):
+    def __init__(self, username, password, firstname, lastname):
 
         """ Luokan konstruktori, joka luo uuden käyttäjän.
         Args:
@@ -18,6 +17,5 @@ class User:
 
         self.username = username
         self.password = password
-        self.highscore = highscore
         self.firstname = firstname
         self.lastname = lastname
