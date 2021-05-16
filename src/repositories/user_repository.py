@@ -3,7 +3,9 @@ from database_connection import get_database_connection
 
 
 def get_users_by_row(row):
-    return User(row["username"], row["password"], row["firstname"], row["lastname"]) if row else None
+    return User(
+        row["username"], row["password"], row["firstname"], row["lastname"]
+    ) if row else None
 
 
 class UserRepository:
@@ -23,8 +25,10 @@ class UserRepository:
         """
 
         cursor = self.connection.cursor()
-        cursor.execute("INSERT INTO Users (username, password, firstname, lastname) values (?,?,?,?)",
-                       (user.username, user.password, user.firstname, user.lastname))
+        cursor.execute(
+            "INSERT INTO Users (username, password, firstname, lastname) values (?,?,?,?)",
+            (user.username, user.password, user.firstname, user.lastname)
+        )
         self.connection.commit()
         return user
 
