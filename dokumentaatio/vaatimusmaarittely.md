@@ -18,6 +18,3 @@ Uudet käyttäjät tulee aluksi rekisteröidä sovellukseen, jonka jälkeen sove
 ### Jatkokehitysideoita
 - [x] Aluksi kysymykset ovat ennalta määrättyjä, joista sovellus valitsee 10 satunnaista kysymystä. Sovelluksen kehittyessä käyttäjä voi valita kuinka monta kysymystä haluaa tietovisaan.
 - [x] Kysymyksissä on eri kategorioita, joista käyttäjä voi valita kotinäytöllä minkä kategorian kysymyksiä haluaa tietovisaan
-- Käyttäjä näkee parhaimman tuloksensa kotinäytöltä
-- Käyttäjä voi lisätä omia kysymyksiä sovellukseen
-- Tietovisasta voi valita perusversion tai version, jossa jokaiseen kysymykseen on vastattava tietyn aikarajan kuluessa
