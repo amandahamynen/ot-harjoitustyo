@@ -12,10 +12,10 @@ Sovelluksen toiminta on testattu Python-versiolla 3.6.0. Vanhempien Python-versi
 
 ## Dokumentaatio
 
+- [Käyttöohje](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 - [Vaatimusmäärittely](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 - [Tuntikirjanpito](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 - [Arkkitehtuurikuvaus](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
-- [Käyttöohje](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 - [Testaus](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md)
 
 
@@ -74,3 +74,7 @@ Pylintin tarkastelun saa suorittamalla komennon:
 ```bash
 poetry run invoke lint
 ```
+
+## Credits
+
+[Ohjelman taustalla käytetty kuva](https://pixabay.com/illustrations/boat-rowing-lake-water-travel-5889919/)
