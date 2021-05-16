@@ -23,7 +23,8 @@ class UserCreation:
         self._last_name_entry = None
         self._password_entry = None
         self._error_label = None
-        self._bg=tkinter.PhotoImage(file="src/resources/boat-5889919_1280.png")
+        self._bg = tkinter.PhotoImage(
+            file="src/resources/boat-5889919_1280.png")
         self._initialize()
 
     def _initialize(self):
@@ -54,13 +55,11 @@ class UserCreation:
         self._creation_frame.place(x=70, y=70)
 
     def pack(self):
-
         """ Pakkaa kehyksen. """
 
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
-
         """ Tuohoaa kehyksen. """
 
         self._frame.destroy()

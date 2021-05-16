@@ -37,7 +37,7 @@ class TestUserRepository(unittest.TestCase):
     def test_delete_all(self):
         user_repository.create(self.user_amanda)
         user_repository.create(self.user_toinen)
-        
+
         users = user_repository.find_all()
         self.assertEqual(len(users), 2)
 

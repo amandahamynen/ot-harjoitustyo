@@ -3,8 +3,9 @@ from entities.question import Question
 from entities.user import User
 from services.quizzy_service import QuizzyService, InvalidCredentialsError
 
+
 class FakeUserRepository:
-    def __init__(self, users = None):
+    def __init__(self, users=None):
         self.users = users or []
 
     def find_all(self):
@@ -30,7 +31,7 @@ class FakeUserRepository:
 
 
 class FakeQuestionRepository:
-    def __init__(self, questions = None):
+    def __init__(self, questions=None):
         self.questions = questions or []
 
     def find_all(self):
@@ -39,20 +40,24 @@ class FakeQuestionRepository:
 
 class TestQuizzyService(unittest.TestCase):
     def setUp(self):
-        self.quizzy_service = QuizzyService(FakeUserRepository(), FakeQuestionRepository())
+        self.quizzy_service = QuizzyService(
+            FakeUserRepository(), FakeQuestionRepository())
         self.user_amanda = User("amanda", "a123", "a", "a")
-        self.question = Question("q", ["1","2","3","4"],"1")
+        self.question = Question("q", ["1", "2", "3", "4"], "1")
 
     def login_user(self, user):
-        self.quizzy_service.create_user(user.username, user.password, user.firstname, user.lastname)
+        self.quizzy_service.create_user(
+            user.username, user.password, user.firstname, user.lastname)
 
     def test_login_with_correct_username_and_password(self):
-        self.quizzy_service.create_user("testi_username", "testi_password", "testi_firstname", "testi_lastname")
+        self.quizzy_service.create_user(
+            "testi_username", "testi_password", "testi_firstname", "testi_lastname")
         user = self.quizzy_service.login("testi_username", "testi_password")
         self.assertEqual(user.username, "testi_username")
 
     def test_login_with_incorrect_username_or_password(self):
-        self.assertRaises(InvalidCredentialsError, lambda: self.quizzy_service.login("wrong", "username_or_password"))
+        self.assertRaises(InvalidCredentialsError, lambda: self.quizzy_service.login(
+            "wrong", "username_or_password"))
 
     def test_get_current_user(self):
         self.login_user(self.user_amanda)

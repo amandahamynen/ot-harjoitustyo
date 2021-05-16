@@ -8,7 +8,6 @@ class Question:
     """
 
     def __init__(self, question, options, answer):
-
         """ Luokan konstruktori, joka luo uuden kysymyksen.
         Args:
             question: Kysymys, tyypiltään String.

@@ -25,7 +25,8 @@ class QuizzyScreen:
         self._frame = None
         self._question_frame = None
         self._question_view = None
-        self._bg=tkinter.PhotoImage(file="src/resources/boat-5889919_1280.png")
+        self._bg = tkinter.PhotoImage(
+            file="src/resources/boat-5889919_1280.png")
         self._initialize_questions()
         self._initialize()
 
@@ -35,7 +36,8 @@ class QuizzyScreen:
         self._how_many = int(quizzy_service.get_number_of_questions())
         self._questions = quizzy_service.get_questions()
         random.shuffle(self._questions)
-        self._questions = [x for index, x in enumerate(self._questions) if index < self._how_many]
+        self._questions = [x for index, x in enumerate(
+            self._questions) if index < self._how_many]
 
     def _initialize(self):
         global points
@@ -73,20 +75,18 @@ class QuizzyScreen:
         q_num = quizzy_service.next_question(q_num)
 
     def _back_handler(self):
-        global q_num 
+        global q_num
         global points
         q_num = 0
         points = 0
         self._handle_back()
 
     def pack(self):
-
         """ Pakkaa kehyksen. """
 
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
-
         """ Tuohoaa kehyksen. """
 
         self._frame.destroy()
@@ -138,13 +138,11 @@ class QuestionView:
         self.answerd = True
 
     def pack(self):
-
         """ Pakkaa kehyksen. """
 
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
-
         """ Tuohoaa kehyksen. """
 
         self._frame.destroy()

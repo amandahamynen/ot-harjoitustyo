@@ -1,5 +1,4 @@
 from entities.user import User
-from entities.question import Question
 
 from repositories.user_repository import (
     user_repository as default_user_repository)
@@ -15,13 +14,18 @@ class QuizzyService:
 
     """ Sovelluksen sovelluslogiikasta vastaava luokka. """
 
-    def __init__(self, user_repository=default_user_repository, question_repository=default_question_repository):
-
+    def __init__(
+        self,
+        user_repository=default_user_repository,
+        question_repository=default_question_repository
+        ):
         """ Luokan konstruktori, joka luo sovelluslogiikasta vastaavan palvelun sovellukselle.
 
         Args:
-            user_repository: Oletusarvoltaan UserRepository-olio, jolla on kyseistä luokkaa vastaavat metodit.
-            question_repository: Oletusarvoltaan QuestionRepository-olio, jolla on kyseistä luokkaa vastaavat metodot.
+            user_repository: Oletusarvoltaan UserRepository-olio, jolla on kyseistä luokkaa
+            vastaavat metodit.
+            question_repository: Oletusarvoltaan QuestionRepository-olio, jolla on kyseistä
+            luokkaa vastaavat metodot.
         """
 
         self.user_repository = default_user_repository
@@ -31,13 +35,13 @@ class QuizzyService:
         self.topic_of_questions = 'Capital cities'
 
     def create_user(self, username, password, firstname, lastname, logged_in=True):
-
         """ Luo uuden käyttäjän ja kirjaa sen sisään.
 
         Args:
             username: Kuvastaa käyttäjän käyttäjätunnusta, tyypiltään String.
             password: Kuvastaa käyttäjän salasanaa, tyypiltään String.
-            logged_in: Kertoo kirjataanko käyttäjä sisään onnistuneen sisäänkirjautumisen jälkeen, tyypiltään Boolean.
+            logged_in: Kertoo kirjataanko käyttäjä sisään onnistuneen
+            sisäänkirjautumisen jälkeen, tyypiltään Boolean.
 
         Returns:
             User-olio.
@@ -50,7 +54,6 @@ class QuizzyService:
         return new_user
 
     def login(self, username, password):
-
         """ Kirjaa käyttäjän sisään sovellukseen.
 
         Args:
@@ -58,7 +61,8 @@ class QuizzyService:
             password: Kuvastaa käyttäjän salasanaa, tyypiltään String.
 
         Raises:
-            InvalidCredentialsError: Jos käyttäjän syöttämä käyttäjätunnus ja salasana eivät tästää, tulee kyseinen virhe.
+            InvalidCredentialsError: Jos käyttäjän syöttämä käyttäjätunnus
+            ja salasana eivät tästää, tulee kyseinen virhe.
 
         Returns:
             Kirjautunut User-olio.
@@ -71,13 +75,11 @@ class QuizzyService:
         return user
 
     def logout(self):
-
         """ Kirjaa nykyisen käyttäjän ulos sovelluksesta. """
 
         self.user = None
 
     def get_current_user(self):
-
         """ Palauttaa sovellukseen kirjautuneen käyttäjän.
 
         Returns:
@@ -86,9 +88,7 @@ class QuizzyService:
 
         return self.user
 
-
     def get_users(self):
-
         """ Palauttaa kaikki sovellukseen rekisteröityneet käyttäjät.
 
         Returns:
@@ -98,7 +98,6 @@ class QuizzyService:
         return self.user_repository.find_all()
 
     def set_topic_of_questions(self, topic):
-
         """ Valitsee kysymykset käyttäjän valitseman aihealueen perusteella.
         Args:
             topic: Aihealueen nimi, tyypiltään String.
@@ -107,7 +106,6 @@ class QuizzyService:
         self.topic_of_questions = topic
 
     def get_topic_of_questions(self):
-
         """ Palauttaa kysymysten aihealueen.
 
         Returns:
@@ -116,17 +114,15 @@ class QuizzyService:
 
         return self.topic_of_questions
 
-    def set_number_of_questions(self, n):
-
-        """ Asettaa kysymysten määräksi käyttäjän valitseman määrän. 
+    def set_number_of_questions(self, number):
+        """ Asettaa kysymysten määräksi käyttäjän valitseman määrän.
         Args:
-            n: Kysymysten määrä, tyypiltään Integer.
+            number: Kysymysten määrä, tyypiltään Integer.
         """
 
-        self.number_of_questions = n
+        self.number_of_questions = number
 
     def get_number_of_questions(self):
-
         """ Palauttaa kysymysten määrän.
 
         Returns:
@@ -136,8 +132,8 @@ class QuizzyService:
         return self.number_of_questions
 
     def get_questions(self):
-
-        """ Palauttaa tiedostossa olevat kysymykset käyttäjän valitseman aihealueen perusteella.
+        """ Palauttaa tiedostossa olevat kysymykset käyttäjän valitseman aihealueen
+        perusteella.
 
         Returns:
             Listan kysymyksistä.
@@ -155,7 +151,6 @@ class QuizzyService:
         return questions
 
     def check_if_correct(self, question, chosen):
-
         """ Tarkistaa, onko kysymykseen vastattu oikein.
 
         Args:
@@ -165,14 +160,11 @@ class QuizzyService:
             Onko vastaus oikein, tyypiltään Boolean.
         """
 
-        if question.answer == chosen:
-            return True
-        else:
-            return False
+        return question.answer == chosen
 
     def next_question(self, q_num):
-
-        """ Kasvattaa kysymyksen numero yhdellä, jotta saadaan seuraava kysymys pelissä.
+        """ Kasvattaa kysymyksen numero yhdellä, jotta saadaan seuraava kysymys
+        pelissä.
         Args:
             q_num = Nykyinen kysymysnumero, tyypiltään Integer.
         Returns:
@@ -183,7 +175,6 @@ class QuizzyService:
         return q_num
 
     def check_for_more_questions(self, q_num, questions):
-
         """ Tarkistaa onko pelissä kysymyksiä jäljellä.
         Args:
             q_num = Nykyinen kysymysnumero, tyypiltään Integer.
@@ -192,13 +183,9 @@ class QuizzyService:
             Onko jäljellä kysymyksiä, tyypiltään Boolean.
         """
 
-        if q_num < len(questions):
-            return True
-        else:
-            return False
+        return q_num < len(questions)
 
     def restart_quiz(self, points, q_num):
-
         """ Aloittaa pelin uudelleen.
         Args:
             points = Pelistä tähän asti saadut pisteet, tyypiltään Integer.

@@ -1,13 +1,12 @@
 class User:
 
     """ Luokka, joka kuvaa yksittäistä käyttäjää sovelluksessa.
-    Attributes: 
+    Attributes:
         username: Kuvastaa käyttäjän käyttäjätunnusta, tyypiltään String.
         password: Kuvastaa käyttäjän salasanaa, tyypiltään String.
     """
 
     def __init__(self, username, password, firstname, lastname):
-
         """ Luokan konstruktori, joka luo uuden käyttäjän.
         Args:
             username: Kuvastaa käyttäjän käyttäjätunnusta, tyypiltään String.

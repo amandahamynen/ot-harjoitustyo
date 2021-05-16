@@ -24,7 +24,6 @@ class QuestionRepository:
         return questions
 
     def find_all(self):
-
         """ Lukee CSV-tiedoston ja palauttaa listan Question-olioista. """
 
         return self._read()

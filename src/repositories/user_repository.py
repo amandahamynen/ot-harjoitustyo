@@ -14,7 +14,6 @@ class UserRepository:
         self.connection = connection
 
     def create(self, user):
-
         """ Lisää uuden käyttäjän tietokantaan.
 
         Args:
@@ -30,7 +29,6 @@ class UserRepository:
         return user
 
     def find_by_username(self, username):
-
         """ Etsii tietokannasta käyttäjän parametrina annetun käyttäjänimen avulla.
 
         Args:
@@ -45,7 +43,6 @@ class UserRepository:
         return get_users_by_row(row)
 
     def find_all(self):
-
         """ Etsii kaikki käyttäjät tietokannasta.
 
         Returns:
@@ -58,7 +55,6 @@ class UserRepository:
         return list(map(get_users_by_row, rows))
 
     def delete_all(self):
-
         """ Poistaa kaikki käyttäjät tietokannasta. """
 
         cursor = self.connection.cursor()

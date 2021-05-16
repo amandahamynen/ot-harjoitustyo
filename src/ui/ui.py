@@ -13,7 +13,6 @@ class UI():
         self._current = None
 
     def start(self):
-
         """ Käynnistää sovelluksen ensimmäisen näkymän, joka on kirjautumisnäkymä. """
 
         self._show_login_screen()

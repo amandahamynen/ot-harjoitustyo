@@ -20,7 +20,8 @@ class HomeScreen:
         self._frame = None
         self._selection_frame = None
         self._q_num = 5
-        self._bg=tkinter.PhotoImage(file="src/resources/boat-5889919_1280.png")
+        self._bg = tkinter.PhotoImage(
+            file="src/resources/boat-5889919_1280.png")
 
         self._initialize()
 
@@ -45,22 +46,26 @@ class HomeScreen:
                               text=f"Welcome to Quizzy, {user.firstname} {user.lastname}!", fg="black", bg="white", font=("Arial", 25))
         label.place(x=450, y=30, anchor=constants.N)
 
-        label1 = tkinter.Label(self._selection_frame, text="Please choose the topic of questions: ", fg="black", bg="white")
+        label1 = tkinter.Label(
+            self._selection_frame, text="Please choose the topic of questions: ", fg="black", bg="white")
         label1.place(x=400, y=250, anchor=constants.N)
 
         topic_options = ['Capital cities', 'Films', 'Games']
         self._topic = tkinter.StringVar()
         self._topic.set(topic_options[0])
-        t = tkinter.OptionMenu(self._selection_frame, self._topic, *topic_options)
+        t = tkinter.OptionMenu(self._selection_frame,
+                               self._topic, *topic_options)
         t.place(x=580, y=250, anchor=constants.N)
 
-        label2 = tkinter.Label(self._selection_frame, text="Please choose the amount of questions: ", fg="black", bg="white")
+        label2 = tkinter.Label(
+            self._selection_frame, text="Please choose the amount of questions: ", fg="black", bg="white")
         label2.place(x=400, y=350, anchor=constants.N)
 
-        num_options = [3,5,10]
+        num_options = [3, 5, 10]
         self._chosen = tkinter.StringVar()
         self._chosen.set(num_options[0])
-        num = tkinter.OptionMenu(self._selection_frame, self._chosen, *num_options)
+        num = tkinter.OptionMenu(
+            self._selection_frame, self._chosen, *num_options)
         num.place(x=580, y=350, anchor=constants.N)
 
         start_button = tkinter.Button(
@@ -77,13 +82,11 @@ class HomeScreen:
         self._handle_start()
 
     def pack(self):
-
         """ Pakkaa kehyksen. """
 
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
-
         """ Tuohoaa kehyksen. """
-    
+
         self._frame.destroy()
