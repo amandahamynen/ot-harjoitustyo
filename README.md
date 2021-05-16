@@ -20,6 +20,8 @@ Sovelluksen toiminta on testattu Python-versiolla 3.6.0. Vanhempien Python-versi
 
 - [Käyttöohje](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 
+- [Testaus](https://github.com/amandahamynen/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md)
+
 
 ## Asennus
 
